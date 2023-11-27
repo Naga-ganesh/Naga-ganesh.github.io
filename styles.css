@@ -1,0 +1,140 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #673ab7;
+    z-index: 1000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff4081;
+}
+
+section {
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+section.active {
+    box-shadow: 0 0 20px rgba(103, 58, 183, 0.8);
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #673ab7;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    content: '🔹'; /* Emoji bullet */
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Add a bit of box shadow to sections for depth */
+section:not(#skills) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle background color to even-numbered skills for contrast */
+li:nth-child(even)::before {
+    content: '🔸'; /* Emoji bullet for even skills */
+    color: #ff4081; /* Match the hover color */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+/* ... (existing styles) */
+
+.emoji {
+    font-size: 1.8em; /* Adjust the font size as needed */
+    /* margin-left: 1px; /* Add some spacing between the text and emoji */ */
+}
+
+/* ... (existing styles) */
+
+/* Highlight active section with extra shadows */
+section.active {
+    box-shadow: 0 0 20px rgba(103, 58, 183, 0.8), 0 0 40px rgba(103, 58, 183, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+/* ... (existing styles) */
