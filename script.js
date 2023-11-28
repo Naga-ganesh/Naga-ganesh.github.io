@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Highlight the target section with extra shadows after a delay
             setTimeout(() => {
+                // Remove 'active' class from all sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Add 'active' class to the target section
                 targetSection.classList.add('active');
             }, 500); // Adjust the delay as needed
         });
@@ -27,11 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const height = section.offsetHeight;
 
             if (window.scrollY >= top && window.scrollY < top + height) {
+                // Remove 'active' class from all sections
+                sections.forEach(s => {
+                    s.classList.remove('active');
+                });
+
+                // Add 'active' class to the current section
                 section.classList.add('active');
-            } else {
-                section.classList.remove('active');
             }
         });
     });
 });
-
